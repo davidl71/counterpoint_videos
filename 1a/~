@@ -1,0 +1,20 @@
+#Counterpoint video creation
+#Resolution 1920x720
+x=2400
+y=760
+#dpi=275
+#dpi=237
+dpi=200
+#x=572
+#dpi=121
+#dpi=207
+#dpi=231
+#MPEG Quality 1=best 31=worst
+q=1
+name_prefix=$1
+#videox=1920
+videox=854
+#videoy=1080
+videoy=480
+#ly2video --note-cursor --videoDef "${x}x${y}" -q $q --title-ttf=/usr/share/fonts/truetype/culmus/DavidCLM-Medium.ttf -t -r $dpi -x $x -y $y -i "$name_prefix".ly && xdg-open "$name_prefix".avi 
+ly2video --no-cursor --videoDef "${videox}x${videoy}" -q $q --title-ttf=/usr/share/fonts/truetype/culmus/DavidCLM-Medium.ttf -t -r $dpi -x $x -y $y -i "$name_prefix".ly && xdg-open "$name_prefix".avi 

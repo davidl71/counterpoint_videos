@@ -1,0 +1,18 @@
+scale=120
+
+x=$(( "$aspect_x" * "$scale" ))
+y=$(( "$aspect_y" * "$scale" ))
+
+#x=$(( $x + 9000 ))
+#echo $x $y; exit 1 
+dpi=200
+#MPEG Quality 1=best 31=worst
+q=1
+videox=$x
+videoy=$y
+
+
+
+crop_in_w=0
+crop_in_h=0
+

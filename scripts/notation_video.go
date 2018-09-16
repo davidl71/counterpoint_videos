@@ -14,7 +14,7 @@ for i in "$INPUT_PREFIX"*.png
 do
         OUTPUT_FILE_NAME="$(echo "$i" | cut -d "." -f 1).avi"
         echo "Processing $i $OUTPUT_FILE_NAME"
-        ffmpeg -y -loop 1 -t 30 -i "$i" -c:v libx264 -t 30 -pix_fmt yuv420p "$OUTPUT_FILE_NAME"
+        ffmpeg -y -loop 1 -t 10 -i "$i" -c:v libx264 -t 30 -pix_fmt yuv420p "$OUTPUT_FILE_NAME"
         #Add video to list of concatenate
         echo "file $OUTPUT_FILE_NAME" >> "$INPUT_PREFIX".txt
 done
